@@ -7,18 +7,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bienvenidos a la Escuela</title>
     <style>
-      
         body {
             background-color: red;
             font-family: Arial, sans-serif;
             color: white; /* El texto será blanco para contrastar */
             text-align: center; /* Centra el texto */
-            padding-top: 20%; /* Para dar espacio arriba */
+            padding-top: 10%; /* Para dar espacio arriba */
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        .login-container {
+            display: inline-block;
+            text-align: left;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+            border-radius: 8px;
+            width: 300px; /* Establece un ancho fijo */
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #fff; /* Fondo blanco para los campos */
+            color: black; /* Color del texto en los campos */
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: #45a049;
+        }
+        .login-container p {
+            font-size: 1rem;
+            margin-top: 10px;
+            color: lightgray;
         }
     </style>
 </head>
 <body>
     <h1>¡Bienvenidos a la escuela!</h1>
+    <div class="login-container">
+        <form action="/submit-login" method="POST">
+            <input type="text" class="input-field" name="username" placeholder="Usuario" required>
+            <input type="password" class="input-field" name="password" placeholder="Contraseña" required>
+            <button type="submit" class="login-btn">Iniciar sesión</button>
+        </form>
+        <p>Por favor, ingresa tus datos para continuar.</p>
+    </div>
 </body>
 </html>
 
