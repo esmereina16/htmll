@@ -5,25 +5,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenidos a la Escuela</title>
+    <title>Bienvenida</title>
     <style>
         body {
-            background-color: red;
+            background-color: #ff5733;
             font-family: Arial, sans-serif;
-            color: white; /* El texto será blanco para contrastar */
-            text-align: center; /* Centra el texto */
-            padding-top: 10%; /* Para dar espacio arriba */
+            color: white;
+            text-align: center;
+            padding-top: 20%;
         }
         h1 {
             font-size: 2.5rem;
         }
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 20px;
+        }
         .login-container {
             display: inline-block;
             text-align: left;
-            padding: 30px;
+            padding: 20px;
             background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
             border-radius: 8px;
-            width: 300px; /* Establece un ancho fijo */
+            width: 300px;
+            margin-top: 20px;
         }
         .input-field {
             width: 100%;
@@ -31,8 +36,8 @@
             margin: 10px 0;
             border-radius: 4px;
             border: 1px solid #ccc;
-            background-color: #fff; /* Fondo blanco para los campos */
-            color: black; /* Color del texto en los campos */
+            background-color: #fff;
+            color: black;
         }
         .login-btn {
             width: 100%;
@@ -46,23 +51,31 @@
         .login-btn:hover {
             background-color: #45a049;
         }
-        .login-container p {
-            font-size: 1rem;
-            margin-top: 10px;
-            color: lightgray;
+        .img-container img {
+            width: 150px;
+            height: auto;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>¡Bienvenidos a la escuela!</h1>
+    <h1>Bienvenidos a la escuela</h1>
+
+    <div class="img-container">
+        <h2>ProA</h2>
+        <img src="https://via.placeholder.com/150" alt="Imagen de ProA"> <!-- Cambia la URL aquí -->
+    </div>
+
     <div class="login-container">
         <form action="/submit-login" method="POST">
-            <input type="text" class="input-field" name="username" placeholder="Usuario" required>
-            <input type="password" class="input-field" name="password" placeholder="Contraseña" required>
+            <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" class="input-field" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" class="input-field" required>
+
             <button type="submit" class="login-btn">Iniciar sesión</button>
         </form>
-        <p>Por favor, ingresa tus datos para continuar.</p>
     </div>
 </body>
 </html>
-
